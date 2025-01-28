@@ -4,8 +4,6 @@ const User = require('../models/user');
 const router = express.Router();
 router.use(auth);
 
-//Cart-
-
 router.get('/', async (req, res) => {
     const user = req.user;
     res.json(user);
