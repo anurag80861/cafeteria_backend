@@ -4,10 +4,12 @@ const User = require('../models/user');
 const router = express.Router();
 router.use(auth);
 
+
+
 router.get('/', async (req, res) => {
     const user = req.user;
-    res.json(user);
-});
+    res.json(user)
+})
 
 router.post('/:dishId', async (req, res) => {
     req.user.cart.push({ dish: req.params.dishId, quantity: 1 });
